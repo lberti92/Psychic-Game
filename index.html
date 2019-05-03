@@ -3,23 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Rock Paper Scissors Part 7</title>
+  <title>Psychic Game</title>
 
   <meta name="viewport content= width=device-width initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/reset.css">
+  
+  <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
-  
+
+  <h1>The Psychic Game</h1>
+  <p> Guess what letter I'm thinking of</p>
   <div>
-    <p id="directions-text">Press r, p or s to start playing!</p>
-    <p id="userchoice-text"></p>
-    <p id="computerchoice-text"></p>
-    <p id="wins-text"></p>
-    <p id="losses-text"></p>
-    <p id="ties-text"></p>
+    <p id="wins-text">Wins: </p>
+    <p id="losses-text">Loses: </p>
+    <p id="guessesleft-text">Guesses left: </p>
+    <p id="userchoice-text">Your Guesses so far: </p>
   </div>
 
   <script type="text/javascript" src="assets/javascript/game.js"></script>
