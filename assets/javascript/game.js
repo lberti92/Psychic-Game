@@ -36,9 +36,9 @@ if (guesses === 0){
 
   // Display the user and computer guesses, and wins/losses/ties.
 
-  winsText.textContent = "wins: " + wins;
-  lossesText.textContent = "losses: " + losses;
-  guessesLeftText.textContent = "Guess left: " + guesses;
-  userChoiceText.textContent = "You chose: " + userGuess;
+  winsText.textContent = wins;
+  lossesText.textContent = losses;
+  guessesLeftText.textContent = guesses;
+  userChoiceText.textContent = userGuess;
 
 };
