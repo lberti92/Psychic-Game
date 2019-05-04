@@ -16,6 +16,7 @@ var userChoiceText = document.getElementById("userchoice-text");
 
 // This function is run whenever the user presses a key.
 document.onkeyup = function (event) {
+  console.log(userChoice.length)
 
   // Determines which key was pressed.
   var userGuess = event.key;
@@ -26,12 +27,16 @@ document.onkeyup = function (event) {
 
   if (userGuess === computerGuess) {
     wins++;
+    userChoice= [];
+    guesses=9;
   }else if (guesses > 0){ 
     guesses--;
     userChoice.push(userGuess);
-    }
-  else {
+    console.log(userChoice, "ln34")
+    } else {
   losses++;
+  userChoice=[];
+  guesses=9;
 }
 
 
@@ -43,10 +48,11 @@ console.log(userChoice)
 
   // Display the user and computer guesses, and wins/losses/ties.
 
+
   winsText.textContent = wins;
   lossesText.textContent = losses;
   guessesLeftText.textContent = guesses;
-  document.getElementById("userchoice-text").textContent= userChoice.toString();
+  userChoiceText.textContent = userChoice;
 
 
 };
