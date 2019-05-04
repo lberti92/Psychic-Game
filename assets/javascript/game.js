@@ -8,10 +8,11 @@ var userChoice = [];
 
 // Create variables that hold references to the places in the HTML where we want to display things.
 
-var userChoiceText = document.getElementById("userchoice-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
-var guessesText = document.getElementById("guesses-text");
+var guessesLeftText = document.getElementById("guessesleft-text");
+var userChoiceText = document.getElementById("userchoice-text");
+
 
 // This function is run whenever the user presses a key.
 document.onkeyup = function (event) {
@@ -22,23 +23,30 @@ document.onkeyup = function (event) {
   // Randomly chooses a choice from the options array. This is the Computer's guess.
   var computerGuess = letterChoices[Math.floor(Math.random() * letterChoices.length)];
 
-  // user select the key
-//  for (var i=o)
 
   if (userGuess === computerGuess) {
     wins++;
-  }else{  
+  }else if (guesses > 0){ 
     guesses--;
-  }
-if (guesses === 0){
-  losses++
+    userChoice.push(userGuess);
+    }
+  else {
+  losses++;
 }
+
+
+
+console.log(computerGuess)
+console.log(userGuess)
+console.log(guesses)
+console.log(userChoice)
 
   // Display the user and computer guesses, and wins/losses/ties.
 
   winsText.textContent = wins;
   lossesText.textContent = losses;
   guessesLeftText.textContent = guesses;
-  userChoiceText.textContent = userGuess;
+  document.getElementById("userchoice-text").textContent= userChoice.toString();
+
 
 };
