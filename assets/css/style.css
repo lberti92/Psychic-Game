@@ -1,0 +1,18 @@
+body {  
+    background-image: url("../images/psychic.jpg");
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 20px;
+}
+
+p {
+    padding: 30px;
+}
+
+.output {
+    margin-left: 20px;
+}
